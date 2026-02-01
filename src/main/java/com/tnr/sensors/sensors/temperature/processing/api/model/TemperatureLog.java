@@ -4,12 +4,13 @@ import lombok.Builder;
 import lombok.Data;
 
 import java.time.OffsetDateTime;
+import java.util.UUID;
 
 @Data
 @Builder
-public class TemperatureLogOutput {
-    private String id;
-    private String sensorId;
+public class TemperatureLog {
+    private UUID id;
+    private UUID sensorId;
     private OffsetDateTime registeredAt;
-    private Double value;
+    private Double temperature;
 }
